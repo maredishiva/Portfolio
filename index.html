@@ -3,192 +3,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Maredi Shiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css" integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <div class="blob blob-tl" aria-hidden="true"></div>
+    <div class="blob blob-br" aria-hidden="true"></div>
+    <div class="leaf leaf-bl" aria-hidden="true"></div>
+    <div class="leaf leaf-br" aria-hidden="true"></div>
+
     <nav>
         <aside id="nav_aside_one">
-            <img src="./assets/Screenshot 2026-01-02 at 6.21.56 PM.png" alt="">
+            <span class="logo-mark">M</span>
             <h2>Maredi Shiva</h2>
         </aside>
+        <button type="button" id="nav-toggle" class="fa-solid fa-bars" title="Open navigation" aria-label="Open navigation" aria-expanded="false" aria-controls="nav_aside_two"></button>
         <aside id="nav_aside_two">
-            <a href="" class="active">Home</a>
+            <a href="#sec_one" class="active">Home</a>
             <a href="#sec_two">About</a>
             <a href="#experience">Experience</a>
             <a href="#sec_three">Projects</a>
             <a href="#sec_four">Contact</a>
-            <i id="themetoggle" class="fa-solid fa-moon"></i>
+            <button type="button" id="themetoggle" class="fa-solid fa-moon" title="Toggle theme" aria-label="Toggle theme"></button>
         </aside>
     </nav>
-    <section id="sec_one">
-        <div id="div_one" data-aos="fade-up" data-aos-duration="1000">
-            <h1 data-aos="zoom-in" data-aos-delay="200">Hi, I'm <span>Maredi Shiva</span></h1>
-            <h4 data-aos="fade-up" data-aos-delay="400">Associate Software Engineer | Frontend Developer | ReactJS Developer</h4>
-            <p data-aos="fade-up" data-aos-delay="600">Building digital solutions that bridge creativity and functionality. Passionate about <br>clean code and user-centered design.</p>
-        </div>
-        <div id="div_two" data-aos="fade-up" data-aos-delay="800">
-            <button onclick="window.open('https://www.linkedin.com/in/maredishiva','_blank')"><i class="fa-brands fa-linkedin"></i>Linked In</button>
-            <button onclick="window.open('https://github.com/maredishiva','_blank')"><i class="fa-brands fa-github"></i>GitHub</button>
-        </div>
-    </section>
-    <section id="sec_two">
-        <h1 data-aos="fade-down" data-aos-duration="800">About Me</h1>
-        <div id="div_three">
-            <span id="underline"></span>
-        </div>
-        <p data-aos="fade-up" data-aos-duration="1000">Results-driven professional with hands-on experience in building scalable, user-focused applications. Skilled in developing responsive and interactive user interfaces, integrating APIs for seamless functionality, and implementing real-time features. A strong team player with solid programming fundamentals, a problem-solving mindset, and a passion for continuous learning and adapting to emerging technologies to deliver high-quality digital solutions.</p>
-        <main>
-            <article id="skills" data-aos="flip-up" data-aos-duration="1000">
-            <h2>Skills & Technologies</h2>
-            <div id="div_four">
-                <aside id="lang">
-                    <h3>Languages</h3>
-                    <span class="btn">
-                        <button>Python</button>
-                        <button>JavaScript</button>
-                        <button>SQL</button>
-                        <button>CSS</button>
-                        <button>HTML</button>
-                    </span>
-                </aside>
-                <aside id="frame">
-                    <h3>Frameworks</h3>
-                    <span class="btn">
-                        <button>React.js</button>
-                        <button>Flask</button> 
-                        <button>Bootstrap5</button>
-                    </span>
-                </aside>
-            </div>
-            <div id="div_five">
-                <aside id="tools">
-                    <h3>Tools</h3>
-                    <span class="btn">
-                        <button>Git</button>
-                        <button>GitHub</button>
-                        <button>VSCode</button>
-                        <button>Figma</button>
-                    </span>
-                </aside>
-                <aside id="concepts">
-                    <h3>Concepts</h3>
-                    <span class="btn">
-                        <button>REST APIs</button>
-                        <button>OOPs</button>
-                        <button>Websockets</button>
-                        <button>Redux Toolkit</button>
-                        <button>JSON</button>
-                    </span>
-                </aside>
-            </div>
-        </article>
-        </main>
-    </section>
-    <section id="experience">
-        <h1 data-aos="fade-down" data-aos-duration="800">Experience</h1>
-        <div id="div_three">
-            <span id="underline"></span>
-        </div>
-        <div class="experience-container">
-            <article class="experience-card" data-aos="fade-up" data-aos-duration="1000">
-                <div class="exp-header">
-                    <h2>React Developer Intern</h2>
-                    <span class="company">Robowaves</span>
+
+    <main>
+        <section id="sec_one">
+            <div id="div_one" data-aos="fade-right">
+                <h1>Hi, I'm <span>Maredi Shiva</span></h1>
+                <h2>React Native Developer | iOS | Android | Web | RecatJS Developer</h2>
+                <p>Building production-ready web and mobile applications with React, React Native, TypeScript, real-time communication, secure authentication, Firebase, and payment integration.</p>
+                <div id="div_two">
+                    <button onclick="window.open('https://github.com/maredishiva','_blank')"><i class="fa-brands fa-github"></i> GitHub</button>
+                    <button class="btn-outline" onclick="window.location.href='#sec_four'"><i class="fa-solid fa-envelope"></i> Contact</button>
                 </div>
-                <p class="duration">Nov 2025 - Dec 2025</p>
-                <p class="exp-focus">Focused on developing a Social Media Application utilizing React.js, Redux Toolkit, and REST APIs for user functionalities.</p>
-                <ul class="exp-achievements">
-                    <li>Developed a Social Media Application using React.js, Redux Toolkit, and REST APIs for authentication, posts, and user interactions.</li>
-                    <li>Integrated Socket.io for real-time communication, including chat, live updates, and instant user actions.</li>
-                    <li>Developed features for articles, blogs, likes, comments, and user engagement workflows.</li>
-                    <li>Implemented followers and following functionality, enabling user interaction across the platform.</li>
-                    <li>Created real-time notifications for follow send requests, accept requests, reject requests.</li>
-                </ul>
+            </div>
+            <div class="hero-orbit" aria-label="Technology skills visualization">
+                <span class="orbit-dot orbit-dot-one" aria-hidden="true"></span>
+                <span class="orbit-dot orbit-dot-two" aria-hidden="true"></span>
+                <span class="orbit-dot orbit-dot-three" aria-hidden="true"></span>
+                <span class="orbit-dot orbit-dot-four" aria-hidden="true"></span>
+                <div class="orbit-center" aria-hidden="true"></div>
+
+                <div class="orbit-track orbit-track-one">
+                    <span class="orbit-path"></span>
+                    <span class="orbit-node" style="--angle: 0deg"><span><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 45deg"><span><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 90deg"><span><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 135deg"><span><img src="https://cdn.simpleicons.org/python/3776AB" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 180deg"><span><img src="https://cdn.simpleicons.org/html5/E34F26" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 225deg"><span><img src="https://cdn.simpleicons.org/css/1572B6" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 270deg"><span><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 315deg"><span><img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="" aria-hidden="true"></span></span>
+                </div>
+
+                <div class="orbit-track orbit-track-two">
+                    <span class="orbit-path"></span>
+                    <span class="orbit-node" style="--angle: 0deg"><span><img src="https://cdn.simpleicons.org/redux/764ABC" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 40deg"><span><img src="https://cdn.simpleicons.org/android/3DDC84" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 80deg"><span><img src="https://cdn.simpleicons.org/apple/000000" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 120deg"><span><img src="https://cdn.simpleicons.org/androidstudio/3DDC84" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 160deg"><span><img src="https://cdn.simpleicons.org/xcode/147EFB" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 200deg"><span><img src="https://cdn.simpleicons.org/gradle/02303A" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 240deg"><span><i class="fa-solid fa-database" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 280deg"><span><i class="fa-solid fa-code" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 320deg"><span><i class="fa-solid fa-plug" aria-hidden="true"></i></span></span>
+                </div>
+
+                <div class="orbit-track orbit-track-three">
+                    <span class="orbit-path"></span>
+                    <span class="orbit-node" style="--angle: 0deg"><span><img src="https://cdn.simpleicons.org/socketdotio/010101" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 36deg"><span><img src="https://cdn.simpleicons.org/mqtt/660066" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 72deg"><span><i class="fa-solid fa-message" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 108deg"><span><i class="fa-solid fa-network-wired" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 144deg"><span><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 180deg"><span><i class="fa-solid fa-bell" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 216deg"><span><i class="fa-solid fa-volume-high" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 252deg"><span><img src="https://cdn.simpleicons.org/jsonwebtokens/000000" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 288deg"><span><i class="fa-solid fa-key" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 324deg"><span><i class="fa-solid fa-lock" aria-hidden="true"></i></span></span>
+                </div>
+
+                <div class="orbit-track orbit-track-four">
+                    <span class="orbit-path"></span>
+                    <span class="orbit-node" style="--angle: 40deg"><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 80deg"><span><img src="https://cdn.simpleicons.org/git/F05032" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 120deg"><span><img src="https://cdn.simpleicons.org/github/181717" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 160deg"><span><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="" aria-hidden="true"></span></span>
+                    <span class="orbit-node" style="--angle: 200deg"><span><i class="fa-solid fa-credit-card" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 240deg"><span><i class="fa-solid fa-cube" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 280deg"><span><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 320deg"><span><i class="fa-solid fa-gears" aria-hidden="true"></i></span></span>
+                </div>
+
+                <div class="orbit-track orbit-track-five">
+                    <span class="orbit-path"></span>
+                    <span class="orbit-node" style="--angle: 0deg"><span><i class="fa-solid fa-users" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 45deg"><span><i class="fa-solid fa-table-columns" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 90deg"><span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 180deg"><span><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></span></span>
+                    <span class="orbit-node" style="--angle: 225deg"><span><i class="fa-solid fa-server" aria-hidden="true"></i></span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec_two">
+            <p class="section-kicker" data-aos="fade-down">Get to know me</p>
+            <h1 data-aos="fade-down" data-aos-duration="800">About</h1>
+            <div class="about-grid">
+                <p data-aos="fade-up" data-aos-duration="800">
+                    I’m a <mark class="about-skill">Frontend</mark> & <mark class="about-skill">React Native</mark> Developer focused on building scalable, production-ready web and mobile applications. I work with <mark class="about-skill">React.js</mark>, <mark class="about-skill">React Native</mark>, <mark class="about-skill">TypeScript</mark>, and <mark class="about-skill">Redux Toolkit</mark> to create responsive and user-focused experiences.
+                </p>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    I have hands-on experience integrating <mark class="about-skill">REST APIs</mark> and implementing real-time communication using <mark class="about-skill">WebSockets</mark>, <mark class="about-skill">Socket.IO</mark>, <mark class="about-skill">STOMP</mark>, and <mark class="about-skill">MQTT</mark>. I also work with <mark class="about-skill">JWT</mark> authentication, <mark class="about-skill">secure token storage</mark>, <mark class="about-skill">Firebase Cloud Messaging</mark>, <mark class="about-skill">push notifications</mark>, <mark class="about-skill">Text-to-Speech</mark>, and payment integration using the <mark class="about-skill">Cashfree React Native SDK</mark>.
+                </p>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    I enjoy solving real-world problems, optimizing application performance, and building reliable cross-platform solutions with clean, maintainable code.
+                </p>
+            </div>
+
+            <article id="skills" class="skills-section" data-aos="fade-up">
+                <div class="skills-header">
+                    <p class="section-kicker">My skills</p>
+                    <h2 class="skills-title">Skills <span class="title-gradient">&amp; Technologies</span></h2>
+                    <p class="skills-subtitle">
+                        A combination of technologies I work with to build scalable, high-performance web and mobile experiences.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <section class="skill-category theme-purple" data-aos="fade-up" data-aos-delay="0" aria-labelledby="cat-programming">
+                        <div class="skill-category-header">
+                            <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                            <div class="skill-category-titleblock">
+                                <h3 id="cat-programming">Programming Languages</h3>
+                                <p class="skill-category-desc">Core languages I use to build applications</p>
+                            </div>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" aria-hidden="true"><span>JavaScript (ES6+)</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/typescript/3178C6" alt="" aria-hidden="true"><span>TypeScript</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/python/3776AB" alt="" aria-hidden="true"><span>Python</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-database tech-icon c-sql"></i><span>SQL</span></div>
+                        </div>
+                    </section>
+
+                    <section class="skill-category theme-blue" data-aos="fade-up" data-aos-delay="100" aria-labelledby="cat-frontend">
+                        <div class="skill-category-header">
+                            <div class="skill-icon"><i class="fa-solid fa-desktop"></i></div>
+                            <div class="skill-category-titleblock">
+                                <h3 id="cat-frontend">Frontend Development</h3>
+                                <p class="skill-category-desc">Building responsive and interactive web apps</p>
+                            </div>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/react/61DAFB" alt="" aria-hidden="true"><span>React.js</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/html5/E34F26" alt="" aria-hidden="true"><span>HTML5</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/css/1572B6" alt="" aria-hidden="true"><span>CSS3</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" aria-hidden="true"><span>Tailwind CSS</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="" aria-hidden="true"><span>Bootstrap</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/redux/764ABC" alt="" aria-hidden="true"><span>Redux Toolkit</span></div>
+                        </div>
+                    </section>
+
+                    <section class="skill-category theme-green" data-aos="fade-up" data-aos-delay="200" aria-labelledby="cat-mobile">
+                        <div class="skill-category-header">
+                            <div class="skill-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <div class="skill-category-titleblock">
+                                <h3 id="cat-mobile">Mobile Development</h3>
+                                <p class="skill-category-desc">Cross-platform mobile app development</p>
+                            </div>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/react/61DAFB" alt="" aria-hidden="true"><span>React Native</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/android/3DDC84" alt="" aria-hidden="true"><span>Android</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/apple/000000" alt="" aria-hidden="true"><span>iOS</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/androidstudio/3DDC84" alt="" aria-hidden="true"><span>Android Studio</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/xcode/147EFB" alt="" aria-hidden="true"><span>Xcode</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/gradle/02303A" alt="" aria-hidden="true"><span>Gradle</span></div>
+                        </div>
+                    </section>
+
+                    <section class="skill-category theme-red" data-aos="fade-up" data-aos-delay="300" aria-labelledby="cat-backend">
+                        <div class="skill-category-header">
+                            <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+                            <div class="skill-category-titleblock">
+                                <h3 id="cat-backend">Backend &amp; APIs</h3>
+                                <p class="skill-category-desc">Building and integrating robust backend services</p>
+                            </div>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item"><i class="fa-solid fa-code tech-icon c-rest"></i><span>REST APIs</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-plug tech-icon c-websockets"></i><span>WebSockets</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/socketdotio/010101" alt="" aria-hidden="true"><span>Socket.IO</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-message tech-icon c-stomp"></i><span>STOMP</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/mqtt/660066" alt="" aria-hidden="true"><span>MQTT</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-network-wired tech-icon c-api"></i><span>API Integration</span></div>
+                        </div>
+                    </section>
+
+                    <section class="skill-category theme-orange" data-aos="fade-up" data-aos-delay="400" aria-labelledby="cat-firebase">
+                        <div class="skill-category-header">
+                            <div class="skill-icon"><i class="fa-solid fa-fire"></i></div>
+                            <div class="skill-category-titleblock">
+                                <h3 id="cat-firebase">Firebase &amp; Notifications</h3>
+                                <p class="skill-category-desc">Authentication, real-time data and push notifications</p>
+                            </div>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/firebase/FFCA28" alt="" aria-hidden="true"><span>Firebase</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/firebase/FFCA28" alt="" aria-hidden="true"><span>FCM</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-bell tech-icon c-notifee"></i><span>Notifee</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-bell tech-icon c-push"></i><span>Push Notifications</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-volume-high tech-icon c-tts"></i><span>Text-to-Speech</span></div>
+                        </div>
+                    </section>
+
+                    <section class="skill-category theme-teal" data-aos="fade-up" data-aos-delay="500" aria-labelledby="cat-auth">
+                        <div class="skill-category-header">
+                            <div class="skill-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="skill-category-titleblock">
+                                <h3 id="cat-auth">Authentication &amp; Security</h3>
+                                <p class="skill-category-desc">Secure and scalable authentication mechanisms</p>
+                            </div>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/jsonwebtokens/000000" alt="" aria-hidden="true"><span>JWT</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-key tech-icon c-key"></i><span>Access/Refresh Tokens</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-lock tech-icon c-keystore"></i><span>Android Keystore</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/apple/000000" alt="" aria-hidden="true"><span>iOS Keychain</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-database tech-icon c-secure"></i><span>Secure Token Storage</span></div>
+                        </div>
+                    </section>
+
+                    <section class="skill-category theme-purple-2" data-aos="fade-up" data-aos-delay="600" aria-labelledby="cat-payments">
+                        <div class="skill-category-header">
+                            <div class="skill-icon"><i class="fa-solid fa-credit-card"></i></div>
+                            <div class="skill-category-titleblock">
+                                <h3 id="cat-payments">Payments</h3>
+                                <p class="skill-category-desc">Integrated secure payment solutions</p>
+                            </div>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item"><i class="fa-solid fa-credit-card tech-icon c-cashfree" aria-hidden="true"></i><span>Cashfree React Native SDK</span></div>
+                        </div>
+                    </section>
+
+                    <section class="skill-category theme-blue-2" data-aos="fade-up" data-aos-delay="700" aria-labelledby="cat-tools">
+                        <div class="skill-category-header">
+                            <div class="skill-icon"><i class="fa-solid fa-wrench"></i></div>
+                            <div class="skill-category-titleblock">
+                                <h3 id="cat-tools">Tools &amp; Platforms</h3>
+                                <p class="skill-category-desc">Development, design and collaboration tools</p>
+                            </div>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="" aria-hidden="true"><span>VS Code</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/git/F05032" alt="" aria-hidden="true"><span>Git</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/github/181717" alt="" aria-hidden="true"><span>GitHub</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/figma/F24E1E" alt="" aria-hidden="true"><span>Figma</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/androidstudio/3DDC84" alt="" aria-hidden="true"><span>Android Studio</span></div>
+                            <div class="skill-item"><img class="tech-logo" src="https://cdn.simpleicons.org/xcode/147EFB" alt="" aria-hidden="true"><span>Xcode</span></div>
+                        </div>
+                    </section>
+
+                    <section class="skill-category theme-red-2" data-aos="fade-up" data-aos-delay="800" aria-labelledby="cat-concepts">
+                        <div class="skill-category-header">
+                            <div class="skill-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                            <div class="skill-category-titleblock">
+                                <h3 id="cat-concepts">Concepts &amp; Practices</h3>
+                                <p class="skill-category-desc">Principles and methodologies I follow</p>
+                            </div>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item"><i class="fa-solid fa-cube tech-icon c-oop"></i><span>OOP</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-layer-group tech-icon c-state"></i><span>State Management</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-network-wired tech-icon c-apiint"></i><span>API Integration</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-gears tech-icon c-agile"></i><span>Agile</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-users tech-icon c-scrum"></i><span>Scrum</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-table-columns tech-icon c-kanban"></i><span>Kanban</span></div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <section id="experience">
+        <p class="section-kicker" data-aos="fade-down">My journey</p>
+        <h1 data-aos="fade-down" data-aos-duration="800">Experience</h1>
+        <div class="experience-timeline">
+            <article class="experience-card" data-aos="fade-up" data-aos-duration="1000">
+                <div class="experience-content">
+                    <div class="exp-header">
+                        <div class="exp-title-group">
+                            <span class="role-badge">Internship</span>
+                            <h2>React Native Developer</h2>
+                            <span class="company">PMRCORE TECH</span>
+                        </div>
+                        <p class="duration"><i class="fa-solid fa-calendar-days"></i> Feb 2026 – Aug 2026</p>
+                    </div>
+                    <p class="exp-focus">Built a cross-platform React Native application for IoT/device monitoring using TypeScript and Redux Toolkit.</p>
+                    <ul class="exp-achievements">
+                        <li>Built a React Native + TypeScript + Redux Toolkit cross-platform IoT/device monitoring application.</li>
+                        <li>Supported <strong>50+ connected devices simultaneously</strong>.</li>
+                        <li>Implemented live monitoring of status, voltage, current and water-flow data with ~2s updates.</li>
+                        <li>Implemented JWT access/refresh token authentication and secure storage via Android Keystore &amp; iOS Keychain.</li>
+                        <li>Integrated WebSockets, STOMP, Socket.IO and MQTT for real-time device communication.</li>
+                        <li>Implemented FCM + Notifee notifications and added TTS alerts.</li>
+                        <li>Integrated Cashfree React Native SDK for payments.</li>
+                        <li>Reduced APK size from <strong>80 MB → 35 MB (56%)</strong> using ABI splits and build types.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="experience-card" data-aos="fade-up" data-aos-duration="1000">
+                <div class="experience-content">
+                    <div class="exp-header">
+                        <div class="exp-title-group">
+                            <span class="role-badge">Internship</span>
+                            <h2>React Developer Intern</h2>
+                            <span class="company">Robowaves</span>
+                        </div>
+                        <p class="duration"><i class="fa-solid fa-calendar-days"></i> Nov 2025 - Dec 2025</p>
+                    </div>
+                    <p class="exp-focus">Focused on developing a Social Media Application utilizing React.js, Redux Toolkit, and REST APIs for user functionalities.</p>
+                    <ul class="exp-achievements">
+                        <li>Developed a Social Media Application using React.js, Redux Toolkit, and REST APIs for authentication, posts, and user interactions.</li>
+                        <li>Integrated Socket.io for real-time communication, including chat, live updates, and instant user actions.</li>
+                        <li>Developed features for articles, blogs, likes, comments, and user engagement workflows.</li>
+                        <li>Implemented followers and following functionality, enabling user interaction across the platform.</li>
+                        <li>Created real-time notifications for follow send requests, accept requests, reject requests.</li>
+                    </ul>
+                </div>
             </article>
         </div>
     </section>
+
     <section id="sec_three">
+        <p class="section-kicker" data-aos="fade-down">My work</p>
         <h1 data-aos="fade-down" data-aos-duration="800">Projects</h1>
-        <div id="div_three">
-            <span id="underline"></span>
-        </div>
         <main id="proj_main">
             <article class="proj" data-aos="zoom-in" data-aos-duration="800">
-            <img src="./assets/Home.png" alt="">
-            <h2 id="bake">E-Commerce Website (Bakers Den)</h2>
-            <p>Developed a responsive e-commerce website using HTML5, CSS3, and JavaScript with mobile-first design and cross-browser compatibility.</p>
-            <div id="div_six">
-                <button>HTML5</button>
-                <button>CSS3</button>
-                <button>JavaScript</button>
-                <button>Responsive Design</button>
-            </div>
-        </article>
-        <article class="proj" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-            <img src="./assets/Admin Dashboard.png" alt="">
-            <h2>Employee Registry</h2>
-            <p>Built using HTML5, CSS3, JavaScript, and React.js with responsive UI and component-based architecture. Implemented CRUD operations for employee records</p>
-            <div id="div_six">
-                <button>React.js</button>
-                <button>JavaScript</button>
-                <button>Crud Operations</button>
-                <button>State Management</button>
-            </div>
-        </article>
-        <article class="proj" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
-            <img src="./assets/DashBoard.png" alt="">
-            <h2>Hotel-Management-System</h2>
-            <p>Developed a full-stack Hotel Management System using Flask, SQLite, and Bootstrap 5 with real-time booking, guest, and reservation management. Implemented dashboard analytics, automated billing, and check-in/check-out workflows using MVC and RESTful APIs.</p>
-            <div id="div_six">
-                <button>Python</button>
-                <button>Flask</button>
-                <button>SQLite</button>
-                <button>Bootstrap5</button>
-                <button>MVC architecture</button>
-                <button>RESTful API</button>
-            </div>
-        </article>
+                <img src="./assets/Home.png" alt="E-Commerce Website (Bakers Den)">
+                <h2 id="bake">E-Commerce Website (Bakers Den)</h2>
+                <p>Developed a responsive e-commerce website using HTML5, CSS3, and JavaScript with mobile-first design and cross-browser compatibility.</p>
+                <div id="div_six">
+                    <button>HTML5</button>
+                    <button>CSS3</button>
+                    <button>JavaScript</button>
+                    <button>Responsive Design</button>
+                </div>
+            </article>
+            <article class="proj" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                <img src="./assets/Admin Dashboard.png" alt="Employee Registry">
+                <h2>Employee Registry</h2>
+                <p>Built using HTML5, CSS3, JavaScript, and React.js with responsive UI and component-based architecture. Implemented CRUD operations for employee records</p>
+                <div id="div_six">
+                    <button>React.js</button>
+                    <button>JavaScript</button>
+                    <button>Crud Operations</button>
+                    <button>State Management</button>
+                </div>
+            </article>
+            <article class="proj" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                <img src="./assets/DashBoard.png" alt="Hotel-Management-System">
+                <h2>Hotel-Management-System</h2>
+                <p>Developed a full-stack Hotel Management System using Flask, SQLite, and Bootstrap 5 with real-time booking, guest, and reservation management. Implemented dashboard analytics, automated billing, and check-in/check-out workflows using MVC and RESTful APIs.</p>
+                <div id="div_six">
+                    <button>Python</button>
+                    <button>Flask</button>
+                    <button>SQLite</button>
+                    <button>Bootstrap5</button>
+                    <button>MVC architecture</button>
+                    <button>RESTful API</button>
+                </div>
+            </article>
         </main>
-        
     </section>
+
     <section id="sec_four">
         <div id="extra">
-            <h1 data-aos="fade-down" data-aos-duration="800">Get In Touch</h1>
-            <div id="div_three">
-                <span id="underline"></span>
+            <p class="section-kicker" data-aos="fade-down">Get in touch</p>
+            <h1 data-aos="fade-down" data-aos-duration="800">Contact</h1>
+        </div>
+        <div class="contact-layout">
+            <div class="contact-side-card" data-aos="fade-up">
+                <div class="contact-side-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                <h2>Get In Touch</h2>
+                <p>I’m a Frontend & React Native Developer focused on building scalable, production-ready web and mobile applications.</p>
+            </div>
+            <div id="form" data-aos="fade-up" data-aos-duration="1000">
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" target="hidden_iframe" onsubmit="return validateForm()">
+                    <input type="hidden" name="access_key" value="2595ecb0-a543-4376-91ce-47198527d000">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="6"></textarea>
+                    <input type="submit" value="Send Message" id="send">
+                </form>
+                <iframe name="hidden_iframe" style="display:none;"></iframe>
+            </div>
+            <div class="contact-info-card" data-aos="fade-up">
+                <a class="contact-info-row" href="mailto:maredishiva8@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>
+                        <strong>Email</strong>
+                        maredishiva8@gmail.com
+                    </span>
+                </a>
+                <a class="contact-info-row" href="https://www.linkedin.com/in/maredishiva" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>
+                        <strong>LinkedIn</strong>
+                        linkedin.com/in/maredishiva
+                    </span>
+                </a>
+                <a class="contact-info-row" href="https://github.com/maredishiva" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                    <span>
+                        <strong>GitHub</strong>
+                        github.com/maredishiva
+                    </span>
+                </a>
             </div>
         </div>
-        <div class="contact-methods" data-aos="fade-up" data-aos-duration="1000">
-        </div>
-        <div id="form" data-aos="fade-up" data-aos-duration="1000">
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" target="hidden_iframe" onsubmit="return validateForm()">
-                <input type="hidden" name="access_key" value="2595ecb0-a543-4376-91ce-47198527d000">
-                <label for="name">Name</label>
-                <br>
-                <input type="text" id="name" name="name" placeholder="Your name">
-                <br><br>
-                <label for="email">Email</label>
-                <br>
-                <input type="email" id="email" name="email" placeholder="Your email">
-                <br><br>
-                <label for="message">Message</label>
-                <br>
-                <textarea id="message" name="message" placeholder="Message" rows="7" cols="71"></textarea>
-                <br><br>
-                <input type="submit" value="Send Message" id="send">
-            </form>
-            <!-- Hidden iframe to prevent page reload -->
-            <iframe name="hidden_iframe" style="display:none;"></iframe>
-        </div>
+        <div class="contact-methods" data-aos="fade-up" data-aos-duration="1000"></div>
         <div id="div_two">
-            <button onclick="window.open('https://www.linkedin.com/in/maredishiva','_blank')"><i class="fa-brands fa-linkedin"></i>Linked In</button>
-            <button onclick="window.open('https://github.com/maredishiva','_blank')"><i class="fa-brands fa-github"></i>GitHub</button>
+            <button onclick="window.open('https://www.linkedin.com/in/maredishiva','_blank')"><i class="fa-brands fa-linkedin"></i> Linked In</button>
+            <button onclick="window.open('https://github.com/maredishiva','_blank')"><i class="fa-brands fa-github"></i> GitHub</button>
         </div>
     </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -207,8 +462,6 @@
         </div>
         <p>&copy; 2025 Maredi Shiva. All rights reserved.</p>
     </footer>
-
-
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./App.js"></script>
